@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | JSL Consulting</title>
+  <meta name="description" content="Privacy Policy for JSL Consulting - Structural Engineering Services in Nottingham, Midlands, England." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://www.jsl-consulting.co.uk/privacy-policy.html" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f5f1;
+      --panel: #f1eee8;
+      --ink: rgba(12,12,12,0.88);
+      --muted: rgba(12,12,12,0.64);
+      --line: rgba(12,12,12,0.12);
+      --accent: #d7d0c3;
+      --card: #ffffff;
+      --radius: 18px;
+      --shadow: 0 22px 48px rgba(0,0,0,0.08);
+      --max: 1200px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      letter-spacing: 0.02em;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .page { min-height: 100vh; }
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 34px;
+      background: rgba(247,245,241,0.8);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+      z-index: 10;
+    }
+    .brand { font-weight: 300; font-size: 20px; letter-spacing: 0.08em; }
+    .nav-links { display: flex; gap: 20px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.12em; }
+    .nav-links a {
+      position: relative;
+      padding: 4px 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      color: var(--ink);
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--ink);
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .nav-links a:hover {
+      opacity: 0.7;
+      transform: translateY(-1px);
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    
+    /* Mobile Menu */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 100;
+    }
+    .menu-toggle span {
+      width: 24px;
+      height: 2px;
+      background: var(--ink);
+      transition: all 0.3s ease;
+    }
+    .menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+    
+    .policy-section {
+      padding: 120px 28px 100px;
+      display: flex;
+      justify-content: center;
+      background: var(--bg);
+    }
+    .policy-content {
+      max-width: 900px;
+      width: 100%;
+    }
+    .policy-content h2 {
+      font-size: 32px;
+      font-weight: 300;
+      margin-bottom: 32px;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+    }
+    .policy-content h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      color: var(--ink);
+      letter-spacing: 0.02em;
+    }
+    .policy-content p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+    .policy-content ul {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.75;
+      margin-bottom: 20px;
+      padding-left: 24px;
+    }
+    .policy-content li {
+      margin-bottom: 12px;
+    }
+    .policy-content strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .back-to-home {
+      margin-top: 48px;
+      display: inline-block;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: opacity 0.3s ease;
+    }
+    .back-to-home:hover {
+      opacity: 0.7;
+    }
+    
+    .footer {
+      padding: 48px 28px;
+      text-align: left;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--line);
+      max-width: var(--max);
+      margin: 60px auto 0;
+      line-height: 1.6;
+    }
+    .footer-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 32px;
+    }
+    .footer-section h4 {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+    .footer-section p,
+    .footer-section a {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+      display: block;
+      margin-bottom: 8px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .footer-section a:hover {
+      color: var(--ink);
+    }
+    .footer-bottom {
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--muted);
+      font-size: 12px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    .footer-links a:hover {
+      color: var(--ink);
+    }
+    .footer-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--ink);
+      transition: width 0.3s ease;
+    }
+    .footer-links a:hover::after {
+      width: 100%;
+    }
+    
+    @media (max-width: 900px) {
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+    @media (max-width: 640px) {
+      .nav { padding: 14px 18px; }
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--card);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 28px 28px;
+        box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+        z-index: 99;
+      }
+      .nav-links.active {
+        right: 0;
+      }
+      .nav-links a {
+        font-size: 16px;
+        padding: 12px 0;
+        width: 100%;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+      .policy-section {
+        padding: 100px 18px 80px;
+      }
+      .policy-content h2 {
+        font-size: 28px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="nav" role="banner">
+      <a href="index.html" class="brand">JSL Consulting</a>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" role="navigation" aria-label="Main navigation">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main role="main">
+      <section class="policy-section">
+        <div class="policy-content">
+          <h2>Privacy Policy</h2>
+          <p><strong>Last Updated:</strong> January 2025</p>
+          
+          <h3>1. Introduction</h3>
+          <p>JSL Consulting ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+          
+          <h3>2. Information We Collect</h3>
+          <p>We may collect information that you provide directly to us, including:</p>
+          <ul>
+            <li>Name and contact information (email address, phone number, postal address)</li>
+            <li>Project details and requirements</li>
+            <li>Any other information you choose to provide through our contact form</li>
+          </ul>
+          
+          <h3>3. How We Use Your Information</h3>
+          <p>We use the information we collect to:</p>
+          <ul>
+            <li>Respond to your inquiries and provide our structural engineering services</li>
+            <li>Communicate with you about projects and services</li>
+            <li>Comply with legal obligations and regulatory requirements</li>
+            <li>Improve our website and services</li>
+          </ul>
+          
+          <h3>4. Data Protection</h3>
+          <p>We implement appropriate technical and organisational measures to protect your personal data against unauthorised access, alteration, disclosure, or destruction. Your data is stored securely and only accessed by authorised personnel.</p>
+          
+          <h3>5. Your Rights</h3>
+          <p>Under UK data protection law, you have the right to:</p>
+          <ul>
+            <li>Access your personal data</li>
+            <li>Rectify inaccurate data</li>
+            <li>Request erasure of your data</li>
+            <li>Object to processing of your data</li>
+            <li>Data portability</li>
+          </ul>
+          
+          <h3>6. Contact Us</h3>
+          <p>If you have questions about this Privacy Policy or wish to exercise your rights, please contact us at <strong>jonathan.latham@jsl-consulting.co.uk</strong> or call <strong>0115 982 7992</strong>.</p>
+          
+          <a href="index.html" class="back-to-home">← Back to Home</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>JSL Consulting</h4>
+          <p>Chartered Structural Engineers based in Nottingham, Midlands, England. Providing expert structural engineering services across the UK.</p>
+          <p style="margin-top: 16px;">Registered with the Institution of Structural Engineers.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p><strong>Phone:</strong> <a href="tel:01159827992">0115 982 7992</a></p>
+          <p><strong>Email:</strong> <a href="mailto:jonathan.latham@jsl-consulting.co.uk">jonathan.latham@jsl-consulting.co.uk</a></p>
+          <p><strong>Location:</strong> Nottingham, Midlands, England</p>
+        </div>
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="cookies-policy.html">Cookies Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 JSL Consulting. All rights reserved.</p>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="privacy-policy.html">Privacy</a>
+          <a href="cookies-policy.html">Cookies</a>
+          <a href="terms-of-service.html">Terms</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (menuToggle) {
+      menuToggle.addEventListener('click', function() {
+        const isActive = navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        menuToggle.setAttribute('aria-expanded', isActive);
+      });
+      
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          menuToggle.classList.remove('active');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  </script>
+</body>
+</html>
+

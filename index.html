@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JSL Consulting | Structural Engineering Services | Nottingham, Midlands</title>
+  <meta name="description" content="JSL Consulting is a structural engineering consultancy based in Nottingham, Midlands, England. Expert structural assessments, design calculations, building regulations compliance, and site visits." />
+  <meta name="keywords" content="structural engineering, Nottingham, Midlands, structural engineer, building regulations, structural calculations, site visits, structural reports, Nottinghamshire" />
+  <meta name="author" content="JSL Consulting" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.jsl-consulting.co.uk/" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.jsl-consulting.co.uk/" />
+  <meta property="og:title" content="JSL Consulting | Structural Engineering Services | Nottingham" />
+  <meta property="og:description" content="Expert structural engineering consultancy in Nottingham, Midlands. Structural assessments, design calculations, and building regulations compliance." />
+  <meta property="og:image" content="https://www.jsl-consulting.co.uk/og-image.jpg" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://www.jsl-consulting.co.uk/" />
+  <meta property="twitter:title" content="JSL Consulting | Structural Engineering Services | Nottingham" />
+  <meta property="twitter:description" content="Expert structural engineering consultancy in Nottingham, Midlands. Structural assessments, design calculations, and building regulations compliance." />
+  <meta property="twitter:image" content="https://www.jsl-consulting.co.uk/og-image.jpg" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f5f1;
+      --panel: #f1eee8;
+      --ink: rgba(12,12,12,0.88);
+      --muted: rgba(12,12,12,0.64);
+      --line: rgba(12,12,12,0.12);
+      --accent: #d7d0c3;
+      --card: #ffffff;
+      --radius: 18px;
+      --shadow: 0 22px 48px rgba(0,0,0,0.08);
+      --max: 1200px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      letter-spacing: 0.02em;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .page { min-height: 100vh; }
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 34px;
+      background: rgba(247,245,241,0.8);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+      z-index: 10;
+    }
+    .brand { font-weight: 300; font-size: 20px; letter-spacing: 0.08em; }
+    .nav-links { display: flex; gap: 20px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.12em; }
+    .nav-links a {
+      position: relative;
+      padding: 4px 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      color: var(--ink);
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--ink);
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .nav-links a:hover {
+      opacity: 0.7;
+      transform: translateY(-1px);
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    
+    /* Mobile Menu */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 100;
+    }
+    .menu-toggle span {
+      width: 24px;
+      height: 2px;
+      background: var(--ink);
+      transition: all 0.3s ease;
+    }
+    .menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+    
+    /* Skip to main content */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--ink);
+      color: #fff;
+      padding: 8px 16px;
+      text-decoration: none;
+      z-index: 100;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+    .hero {
+      padding: 140px 28px 96px;
+      display: flex;
+      justify-content: center;
+    }
+    .hero-inner {
+      position: relative;
+      width: 100%;
+      max-width: var(--max);
+      background: var(--panel);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      min-height: 64vh;
+    }
+    .hero img { filter: grayscale(12%); }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(0,0,0,0.05), rgba(0,0,0,0.25));
+      mix-blend-mode: multiply;
+    }
+    .hero-copy {
+      position: absolute;
+      left: 8%;
+      bottom: 14%;
+      max-width: 520px;
+      color: #f9f7f2;
+      text-shadow: 0 12px 36px rgba(0,0,0,0.35);
+    }
+    .kicker { text-transform: uppercase; letter-spacing: 0.28em; font-size: 12px; opacity: 0.85; }
+    h1 {
+      margin: 12px 0 14px;
+      font-size: clamp(38px, 6vw, 64px);
+      font-weight: 300;
+      line-height: 1.05;
+    }
+    .sub { font-size: 16px; max-width: 420px; opacity: 0.9; }
+    .cta {
+      margin-top: 22px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 999px;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    .section {
+      padding: 80px 28px;
+      display: flex; justify-content: center;
+    }
+    .section-inner { width: 100%; max-width: var(--max); }
+    .tri-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 22px;
+    }
+    .tri-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex; flex-direction: column;
+    }
+    .tri-card img { aspect-ratio: 4 / 3; }
+    .tri-body { padding: 18px 18px 22px; }
+    .tri-label {
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    .tri-text { color: var(--muted); font-size: 14px; line-height: 1.5; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+    .grid-card {
+      background: var(--card);
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      min-height: 180px;
+      position: relative;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+    }
+    .grid-card img { aspect-ratio: 1 / 1; }
+    .grid-label {
+      position: absolute;
+      left: 14px; bottom: 14px;
+      background: rgba(255,255,255,0.86);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink);
+      box-shadow: 0 10px 18px rgba(0,0,0,0.12);
+    }
+    .footer {
+      padding: 48px 28px;
+      text-align: left;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--line);
+      max-width: var(--max);
+      margin: 60px auto 0;
+      line-height: 1.6;
+    }
+    .footer-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 32px;
+    }
+    .footer-section h4 {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+    .footer-section p,
+    .footer-section a {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+      display: block;
+      margin-bottom: 8px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .footer-section a:hover {
+      color: var(--ink);
+    }
+    .footer-bottom {
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--muted);
+      font-size: 12px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    .footer-links a:hover {
+      color: var(--ink);
+    }
+    .footer-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--ink);
+      transition: width 0.3s ease;
+    }
+    .footer-links a:hover::after {
+      width: 100%;
+    }
+    
+    /* Cookie Consent Banner */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--card);
+      border-top: 1px solid var(--line);
+      padding: 20px 28px;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .cookie-banner.show {
+      display: flex;
+    }
+    .cookie-banner p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+      margin: 0;
+      flex: 1;
+      min-width: 250px;
+    }
+    .cookie-banner a {
+      color: var(--ink);
+      text-decoration: underline;
+    }
+    .cookie-buttons {
+      display: flex;
+      gap: 12px;
+    }
+    .cookie-btn {
+      padding: 10px 20px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink);
+      border-radius: 6px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Manrope', system-ui, sans-serif;
+    }
+    .cookie-btn.accept {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+    .cookie-btn:hover {
+      opacity: 0.8;
+    }
+    
+    /* Contact Details */
+    .contact-details {
+      margin-top: 32px;
+      padding-top: 32px;
+      border-top: 1px solid var(--line);
+    }
+    .contact-details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin-top: 24px;
+    }
+    .contact-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .contact-item strong {
+      color: var(--ink);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .contact-item a,
+    .contact-item span {
+      color: var(--muted);
+      font-size: 15px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .contact-item a:hover {
+      color: var(--ink);
+    }
+    
+    /* Form Validation */
+    .form-group input:invalid:not(:placeholder-shown),
+    .form-group textarea:invalid:not(:placeholder-shown) {
+      border-color: #dc2626;
+    }
+    .form-group input:valid:not(:placeholder-shown),
+    .form-group textarea:valid:not(:placeholder-shown) {
+      border-color: #16a34a;
+    }
+    .error-message {
+      color: #dc2626;
+      font-size: 12px;
+      margin-top: 4px;
+      display: none;
+    }
+    .form-group.error .error-message {
+      display: block;
+    }
+    
+    /* Contact Form Styles */
+    .contact-form {
+      margin-top: 32px;
+    }
+    .form-group {
+      margin-bottom: 24px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--ink);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--card);
+      color: var(--ink);
+      font-family: 'Manrope', system-ui, sans-serif;
+      font-size: 15px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--ink);
+      box-shadow: 0 0 0 3px rgba(12,12,12,0.05);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .submit-btn {
+      padding: 14px 32px;
+      background: var(--ink);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.3s ease, transform 0.2s ease;
+      font-family: 'Manrope', system-ui, sans-serif;
+    }
+    .submit-btn:hover {
+      opacity: 0.85;
+      transform: translateY(-1px);
+    }
+    .submit-btn:active {
+      transform: translateY(0);
+    }
+    .submit-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .form-message {
+      margin-top: 20px;
+      padding: 14px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      display: none;
+    }
+    .form-message.success {
+      display: block;
+      background: rgba(34, 197, 94, 0.1);
+      color: #16a34a;
+      border: 1px solid rgba(34, 197, 94, 0.2);
+    }
+    .form-message.error {
+      display: block;
+      background: rgba(239, 68, 68, 0.1);
+      color: #dc2626;
+      border: 1px solid rgba(239, 68, 68, 0.2);
+    }
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Scroll animations */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    
+    /* Section scroll offset for fixed header */
+    section[id] {
+      scroll-margin-top: 80px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero { padding-top: 110px; }
+      .hero-copy { left: 6%; bottom: 10%; }
+      .tri-grid { grid-template-columns: 1fr; }
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .cookie-banner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .cookie-buttons {
+        width: 100%;
+      }
+      .cookie-btn {
+        flex: 1;
+      }
+    }
+    @media (max-width: 640px) {
+      .nav { padding: 14px 18px; }
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--card);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 28px 28px;
+        box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+        z-index: 99;
+      }
+      .nav-links.active {
+        right: 0;
+      }
+      .nav-links a {
+        font-size: 16px;
+        padding: 12px 0;
+        width: 100%;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+      .hero-inner { min-height: 70vh; }
+      h1 { font-size: clamp(32px, 9vw, 44px); }
+      .section { padding: 64px 18px; }
+      .grid { grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .policy-section {
+        padding: 80px 18px;
+      }
+      .policy-content h2 {
+        font-size: 28px;
+      }
+      .contact-details-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="page">
+    <header class="nav" role="banner">
+      <div class="brand">JSL Consulting</div>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" role="navigation" aria-label="Main navigation">
+        <a href="#home" aria-label="Home">Home</a>
+        <a href="#about" aria-label="About">About</a>
+        <a href="#services" aria-label="Services">Services</a>
+        <a href="#contact" aria-label="Contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main-content" role="main">
+      <section id="home" class="hero">
+        <div class="hero-inner reveal">
+          <img src="https://images.unsplash.com/photo-1503389152951-9f343605f61e?auto=format&fit=crop&w=1600&q=80" alt="Structural engineering hero">
+          <div class="hero-overlay"></div>
+          <div class="hero-copy">
+            <div class="kicker">Structural Engineering</div>
+            <h1>Structural Solutions<br>Defined By Precision & Trust.</h1>
+            <div class="sub">Proven integrity—load-bearing analysis, reinforced design, and regulatory assurance for complex builds.</div>
+            <a class="cta" href="#contact">Consult with our engineers →</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="section-inner reveal" style="max-width: 900px;">
+          <div class="tri-label">About</div>
+          <p style="color: var(--muted); font-size: 16px; line-height: 1.7;">
+            At ML Consulting, we believe structural engineering should be straightforward, not overcomplicated. Since 2009, we've been a trusted name in structural engineering across Nottingham and the Midlands, delivering clear, sensible solutions with a personal touch.
+          </p>
+          <p style="color: var(--muted); font-size: 16px; line-height: 1.7; margin-top: 20px;">
+            We are a responsive, client-focused team that delivers practical results without unnecessary complexity. Clients value our strong communication, commitment to deadlines, and hands-on service. From initial concept to final delivery, we're on hand when you need us, ready to listen, respond, and engineer with purpose.
+          </p>
+          <p style="color: var(--muted); font-size: 16px; line-height: 1.7; margin-top: 20px;">
+            Our dedicated team brings decades of experience, including work on globally recognised projects such as the British Library and Hong Kong Airport. We bring world-class expertise to every project, big or small. Today, we support residential, commercial, and public-sector clients across Nottingham and the Midlands with solutions tailored to the needs of each site, each build, and each budget.
+          </p>
+          <p style="color: var(--muted); font-size: 16px; line-height: 1.7; margin-top: 20px;">
+            We continue to push boundaries by combining engineering tradition with future technology and sustainable practices, ensuring future-ready results that stand the test of time. Straightforward structural engineering, practical solutions, and a team that's always on hand when you need us.
+          </p>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="section-inner">
+          <div class="tri-grid">
+            <article class="tri-card reveal">
+              <img src="https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=900&q=80" alt="Precision">
+              <div class="tri-body">
+                <div class="tri-label">Site Visits</div>
+                <div class="tri-text">Finite element analysis, seismic checks, and tolerance-driven detailing to secure structural performance.</div>
+              </div>
+            </article>
+            <article class="tri-card reveal">
+              <img src="https://images.unsplash.com/photo-1433838552652-f9a46b332c40?auto=format&fit=crop&w=900&q=80" alt="Innovation">
+              <div class="tri-body">
+                <div class="tri-label">Reports</div>
+                <div class="tri-text">Advanced materials, composite systems, and digital workflows that shorten cycles and elevate resilience.</div>
+              </div>
+            </article>
+            <article class="tri-card reveal">
+              <img src="https://images.unsplash.com/photo-1437419764061-2473afe69fc2?auto=format&fit=crop&w=900&q=80" alt="Authenticity">
+              <div class="tri-body">
+                <div class="tri-label">Calculations</div>
+                <div class="tri-text">Transparent calculations, certified documentation, and client first approach tocollaboration across every milestone.</div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="section-inner reveal" style="max-width: 700px;">
+          <div class="tri-label">Contact</div>
+          <div class="contact-details">
+            <div class="contact-details-grid">
+              <div class="contact-item">
+                <strong>Phone</strong>
+                <a href="tel:01159827992">0115 982 7992</a>
+              </div>
+              <div class="contact-item">
+                <strong>Email</strong>
+                <a href="mailto:jonathan.latham@jsl-consulting.co.uk">jonathan.latham@jsl-consulting.co.uk</a>
+              </div>
+              <div class="contact-item">
+                <strong>Location</strong>
+                <span>Nottingham, Midlands, England</span>
+              </div>
+            </div>
+          </div>
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required aria-required="true" aria-describedby="name-error">
+              <span class="error-message" id="name-error">Please enter your name</span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-error">
+              <span class="error-message" id="email-error">Please enter a valid email address</span>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required aria-required="true" aria-describedby="subject-error">
+              <span class="error-message" id="subject-error">Please enter a subject</span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required aria-required="true" aria-describedby="message-error"></textarea>
+              <span class="error-message" id="message-error">Please enter your message</span>
+            </div>
+            <button type="submit" class="submit-btn" aria-label="Send message">Send Message</button>
+            <div id="form-message" class="form-message" role="alert"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>JSL Consulting</h4>
+          <p>Chartered Structural Engineers based in Nottingham, Midlands, England. Providing expert structural engineering services across the UK.</p>
+          <p style="margin-top: 16px;">Registered with the Institution of Structural Engineers.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p><strong>Phone:</strong> <a href="tel:01159827992">0115 982 7992</a></p>
+          <p><strong>Email:</strong> <a href="mailto:jonathan.latham@jsl-consulting.co.uk">jonathan.latham@jsl-consulting.co.uk</a></p>
+          <p><strong>Location:</strong> Nottingham, Midlands, England</p>
+        </div>
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="cookies-policy.html">Cookies Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 JSL Consulting. All rights reserved.</p>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="privacy-policy.html">Privacy</a>
+          <a href="cookies-policy.html">Cookies</a>
+          <a href="terms-of-service.html">Terms</a>
+        </nav>
+      </div>
+    </footer>
+    
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent">
+      <p>We use cookies to enhance your browsing experience and analyze site traffic. By clicking "Accept", you consent to our use of cookies. <a href="cookies-policy.html">Learn more</a></p>
+      <div class="cookie-buttons">
+        <button class="cookie-btn accept" id="accept-cookies" aria-label="Accept cookies">Accept</button>
+        <button class="cookie-btn" id="decline-cookies" aria-label="Decline cookies">Decline</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (menuToggle) {
+      menuToggle.addEventListener('click', function() {
+        const isActive = navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        menuToggle.setAttribute('aria-expanded', isActive);
+      });
+      
+      // Close menu when clicking a link
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          menuToggle.classList.remove('active');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+    
+    // Cookie Consent Banner
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptCookies = document.getElementById('accept-cookies');
+    const declineCookies = document.getElementById('decline-cookies');
+    
+    // Check if user has already made a choice
+    if (!localStorage.getItem('cookieConsent')) {
+      if (cookieBanner) {
+        cookieBanner.classList.add('show');
+      }
+    }
+    
+    if (acceptCookies) {
+      acceptCookies.addEventListener('click', () => {
+        localStorage.setItem('cookieConsent', 'accepted');
+        if (cookieBanner) cookieBanner.classList.remove('show');
+        // Initialize analytics here if needed
+      });
+    }
+    
+    if (declineCookies) {
+      declineCookies.addEventListener('click', () => {
+        localStorage.setItem('cookieConsent', 'declined');
+        if (cookieBanner) cookieBanner.classList.remove('show');
+      });
+    }
+    
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.18 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Smooth scroll with offset for fixed header
+    document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          const headerOffset = 80;
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Smooth scroll for CTA button
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      if (anchor.classList.contains('cta')) {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            const headerOffset = 80;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      }
+    });
+
+    // Form Validation
+    const contactForm = document.getElementById('contact-form');
+    const formMessage = document.getElementById('form-message');
+    
+    function validateField(field) {
+      const formGroup = field.closest('.form-group');
+      const errorMessage = formGroup.querySelector('.error-message');
+      
+      if (!field.validity.valid) {
+        formGroup.classList.add('error');
+        if (errorMessage) {
+          if (field.validity.valueMissing) {
+            errorMessage.textContent = 'This field is required';
+          } else if (field.validity.typeMismatch && field.type === 'email') {
+            errorMessage.textContent = 'Please enter a valid email address';
+          } else {
+            errorMessage.textContent = 'Please check this field';
+          }
+        }
+        return false;
+      } else {
+        formGroup.classList.remove('error');
+        return true;
+      }
+    }
+    
+    // Real-time validation
+    if (contactForm) {
+      const formFields = contactForm.querySelectorAll('input, textarea');
+      formFields.forEach(field => {
+        field.addEventListener('blur', () => validateField(field));
+        field.addEventListener('input', () => {
+          if (field.closest('.form-group').classList.contains('error')) {
+            validateField(field);
+          }
+        });
+      });
+    }
+    
+    // Contact Form Handler using Formspree
+    if (contactForm) {
+      // IMPORTANT: Replace 'YOUR_FORMSPREE_ENDPOINT' with your actual Formspree endpoint
+      // Get your endpoint by signing up at https://formspree.io (free)
+      // Your endpoint will look like: https://formspree.io/f/YOUR_FORM_ID
+      const FORMSPREE_ENDPOINT = 'YOUR_FORMSPREE_ENDPOINT';
+      
+      contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Validate all fields
+        let isValid = true;
+        const formFields = this.querySelectorAll('input[required], textarea[required]');
+        formFields.forEach(field => {
+          if (!validateField(field)) {
+            isValid = false;
+          }
+        });
+        
+        if (!isValid) {
+          formMessage.className = 'form-message error';
+          formMessage.textContent = 'Please correct the errors in the form before submitting.';
+          formMessage.style.display = 'block';
+          return;
+        }
+        
+        const submitBtn = this.querySelector('.submit-btn');
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        formMessage.className = 'form-message';
+        formMessage.style.display = 'none';
+        
+        const formData = {
+          name: document.getElementById('name').value,
+          email: document.getElementById('email').value,
+          subject: document.getElementById('subject').value,
+          message: document.getElementById('message').value,
+          _replyto: document.getElementById('email').value,
+          _subject: `Contact Form: ${document.getElementById('subject').value}`
+        };
+        
+        // Check if endpoint is configured
+        if (FORMSPREE_ENDPOINT === 'YOUR_FORMSPREE_ENDPOINT') {
+          formMessage.className = 'form-message error';
+          formMessage.textContent = 'Form endpoint not configured. Please set up Formspree and update FORMSPREE_ENDPOINT in the script.';
+          formMessage.style.display = 'block';
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+          return;
+        }
+        
+        try {
+          const response = await fetch(FORMSPREE_ENDPOINT, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(formData)
+          });
+          
+          if (response.ok) {
+            formMessage.className = 'form-message success';
+            formMessage.textContent = 'Thank you! Your message has been sent successfully. We will get back to you soon.';
+            formMessage.style.display = 'block';
+            contactForm.reset();
+            
+            // Remove error states
+            contactForm.querySelectorAll('.form-group').forEach(group => {
+              group.classList.remove('error');
+            });
+            
+            // Scroll to message
+            formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          } else {
+            const data = await response.json();
+            throw new Error(data.error || 'Failed to send message');
+          }
+          
+        } catch (error) {
+          console.error('Error sending email:', error);
+          formMessage.className = 'form-message error';
+          formMessage.textContent = 'Sorry, there was an error sending your message. Please try again or email us directly at jonathan.latham@jsl-consulting.co.uk';
+          formMessage.style.display = 'block';
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        }
+      });
+    }
+    
+    // Google Analytics (replace with your tracking ID)
+    // Uncomment and add your GA4 measurement ID when ready
+    /*
+    if (localStorage.getItem('cookieConsent') === 'accepted') {
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'YOUR_GA_TRACKING_ID', 'auto');
+      ga('send', 'pageview');
+    }
+    */
+  </script>
+</body>
+</html>
+
+
