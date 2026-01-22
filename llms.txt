@@ -1,0 +1,9 @@
+Site: JSL Consulting
+URL: https://www.jsl-consulting.co.uk/
+Type: Structural Engineering Consultancy
+Location: Nottingham, Midlands, United Kingdom
+Services: Structural surveys, calculations, building regulations, site inspections, residential and commercial structural engineering
+Owner: Jonathan Latham, Chartered Structural Engineer
+Contact: jonathan@jsl-consulting.co.uk
+Preferred Canonical: https://www.jsl-consulting.co.uk/
+Indexing: Allowed
